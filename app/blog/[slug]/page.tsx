@@ -5,6 +5,7 @@ import { TypographyH1 } from "@/components/ui/typography";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
+// import type { Metadata } from "next";
 
 export async function generateStaticParams() {
   return blogs.map((blog) => ({
@@ -12,10 +13,15 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlogDetailPage(context: { params: { slug: string } }) {
-  const { params } = await Promise.resolve(context); // ✅ fix: pastikan params resolved
-  const blog = blogs.find((item) => item.slug === params.slug);
+// 👇 gunakan PageProps typing dari Next.js
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
 
+export default async function BlogDetailPage({ params }: PageProps) {
+  const blog = blogs.find((item) => item.slug === params.slug);
   if (!blog) return notFound();
 
   return (

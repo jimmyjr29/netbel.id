@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "d3495b0e5ef24210008dc3ed416bfbb6",
-    "previewModeSigningKey": "5bcb13ed9089818c84252c989001ab6550db86e57ded3f67a1981f54352c1528",
-    "previewModeEncryptionKey": "56d72d330ea5bbf1e9bcf8182120453eedaf8973fbf5f3c81a2bfff660b39436"
-  }
-}
+{"version":4,"routes":{"/blog/manfaat-blog-di-website-bisnis":{},"/blog/kenapa-website-bisnis":{},"/blog/ciri-website-bagus":{},"/blog/penjualan-dari-website":{},"/blog/seo-untuk-umkm":{},"/blog/perbedaan-website-dan-sosmed":{}},"dynamicRoutes":{"/blog/[slug]":{"fallback":null}},"notFoundRoutes":[],"preview":{"previewModeId":"d3495b0e5ef24210008dc3ed416bfbb6","previewModeSigningKey":"5bcb13ed9089818c84252c989001ab6550db86e57ded3f67a1981f54352c1528","previewModeEncryptionKey":"56d72d330ea5bbf1e9bcf8182120453eedaf8973fbf5f3c81a2bfff660b39436"}}
