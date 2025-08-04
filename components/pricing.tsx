@@ -142,7 +142,7 @@ const Pricing = () => {
               <h3 className="text-lg font-semibold">{plan.name}</h3>
               <p className="mt-2 text-3xl font-bold text-primary">{plan.price ? `Rp${plan.price.toLocaleString("id-ID")}` : "Kustom"}</p>
               <p className="mt-4 font-medium text-muted-foreground">{plan.description}</p>
-              <a href={`https://wa.me/087868626690?text=${encodeURIComponent(`Halo NetBel! Saya tertarik dengan paket *${plan.name}*. Mohon info lebih lanjut ya.`)}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://wa.me/+6281949427807?text=${encodeURIComponent(`Halo NetBel! Saya tertarik dengan paket *${plan.name}*. Mohon info lebih lanjut ya.`)}`} target="_blank" rel="noopener noreferrer">
                 <Button variant={plan.isPopular ? "default" : "outline"} size="lg" className="w-full mt-6 text-base">
                   {plan.buttonText}
                 </Button>

@@ -1305,6 +1305,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
+    "blogs": ()=>blogs,
     "default": ()=>BlogPage
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
@@ -1318,76 +1319,44 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 const blogs = [
     {
-        id: 1,
+        slug: "kenapa-website-bisnis",
         title: "Kenapa Bisnis Lokal Butuh Website Profesional?",
         excerpt: "Di era digital, website bukan hanya etalase online. Ia adalah fondasi kepercayaan pelanggan dan kekuatan pemasaran...",
-        image: "https://s3-alpha.figma.com/hub/file/3695993906/971184d8-1bfb-4352-b387-2b80fed0832e-cover.png",
         date: "19 Juli 2025",
-        link: "/blog/kenapa-website-bisnis"
+        image: "https://s3-alpha.figma.com/hub/file/971184d8-cover.png",
+        content: "\n      <p>Di era digital, website bukan hanya etalase online.</p>\n      <p>Ia adalah fondasi kepercayaan pelanggan dan kekuatan pemasaran. Bisnis lokal yang tidak memiliki website profesional akan tertinggal dari kompetitor yang lebih siap menghadapi era digital.</p>\n    "
     },
     {
-        id: 2,
+        slug: "ciri-website-bagus",
         title: "5 Ciri Website yang Membuat Pelanggan Betah",
         excerpt: "Desain menarik saja tidak cukup. Ini 5 hal penting yang membuat pengunjung nyaman dan mau kembali...",
-        image: "https://s3-alpha.figma.com/hub/file/3191449246/22f98b38-ccd9-4dbf-80c1-41d6ee983dc0-cover.png",
         date: "10 Juli 2025",
-        link: "/blog/ciri-website-bagus"
+        image: "https://s3-alpha.figma.com/hub/file/22f98b38-cover.png",
+        content: "\n      <ol>\n        <li>Desain responsif di semua perangkat</li>\n        <li>Waktu loading cepat</li>\n        <li>Navigasi mudah dipahami</li>\n        <li>Konten relevan & menarik</li>\n        <li>Kontak mudah diakses</li>\n      </ol>\n    "
     },
     {
-        id: 3,
+        slug: "penjualan-dari-website",
         title: "Cara Meningkatkan Penjualan Lewat Website",
         excerpt: "Website yang baik bukan cuma tampil cantik, tapi juga bisa mendatangkan cuan. Simak tips-tipsnya di sini...",
-        image: "https://s3-alpha.figma.com/hub/file/3695993906/971184d8-1bfb-4352-b387-2b80fed0832e-cover.png",
         date: "3 Juli 2025",
-        link: "/blog/penjualan-dari-website"
+        image: "https://s3-alpha.figma.com/hub/file/971184d8-cover.png",
+        content: "\n      <p>Optimalkan call-to-action (CTA), gunakan copywriting yang meyakinkan, dan pastikan halaman produk mudah ditemukan. Jangan lupa juga optimasi SEO!</p>\n    "
     },
     {
-        id: 4,
-        title: "Kenapa Bisnis Lokal Butuh Website Profesional?",
-        excerpt: "Di era digital, website bukan hanya etalase online. Ia adalah fondasi kepercayaan pelanggan dan kekuatan pemasaran...",
-        image: "https://s3-alpha.figma.com/hub/file/3695993906/971184d8-1bfb-4352-b387-2b80fed0832e-cover.png",
-        date: "19 Juli 2025",
-        link: "/blog/kenapa-website-bisnis"
+        slug: "seo-untuk-umkm",
+        title: "Panduan SEO untuk UMKM Pemula",
+        excerpt: "SEO bukan hanya untuk perusahaan besar. UMKM juga bisa meraih halaman pertama Google dengan strategi tepat...",
+        date: "25 Juni 2025",
+        image: "https://s3-alpha.figma.com/hub/file/22f98b38-cover.png",
+        content: "\n      <p>Gunakan kata kunci lokal, daftarkan bisnis ke Google Bisnisku, dan buat konten rutin seperti blog. Ini akan bantu pelanggan menemukanmu lebih mudah.</p>\n    "
     },
     {
-        id: 5,
-        title: "5 Ciri Website yang Membuat Pelanggan Betah",
-        excerpt: "Desain menarik saja tidak cukup. Ini 5 hal penting yang membuat pengunjung nyaman dan mau kembali...",
-        image: "https://s3-alpha.figma.com/hub/file/3191449246/22f98b38-ccd9-4dbf-80c1-41d6ee983dc0-cover.png",
-        date: "10 Juli 2025",
-        link: "/blog/ciri-website-bagus"
-    },
-    {
-        id: 6,
-        title: "Cara Meningkatkan Penjualan Lewat Website",
-        excerpt: "Website yang baik bukan cuma tampil cantik, tapi juga bisa mendatangkan cuan. Simak tips-tipsnya di sini...",
-        image: "https://s3-alpha.figma.com/hub/file/3695993906/971184d8-1bfb-4352-b387-2b80fed0832e-cover.png",
-        date: "3 Juli 2025",
-        link: "/blog/penjualan-dari-website"
-    },
-    {
-        id: 7,
-        title: "Kenapa Bisnis Lokal Butuh Website Profesional?",
-        excerpt: "Di era digital, website bukan hanya etalase online. Ia adalah fondasi kepercayaan pelanggan dan kekuatan pemasaran...",
-        image: "https://s3-alpha.figma.com/hub/file/3695993906/971184d8-1bfb-4352-b387-2b80fed0832e-cover.png",
-        date: "19 Juli 2025",
-        link: "/blog/kenapa-website-bisnis"
-    },
-    {
-        id: 8,
-        title: "5 Ciri Website yang Membuat Pelanggan Betah",
-        excerpt: "Desain menarik saja tidak cukup. Ini 5 hal penting yang membuat pengunjung nyaman dan mau kembali...",
-        image: "https://s3-alpha.figma.com/hub/file/3191449246/22f98b38-ccd9-4dbf-80c1-41d6ee983dc0-cover.png",
-        date: "10 Juli 2025",
-        link: "/blog/ciri-website-bagus"
-    },
-    {
-        id: 9,
-        title: "Cara Meningkatkan Penjualan Lewat Website",
-        excerpt: "Website yang baik bukan cuma tampil cantik, tapi juga bisa mendatangkan cuan. Simak tips-tipsnya di sini...",
-        image: "https://s3-alpha.figma.com/hub/file/3695993906/971184d8-1bfb-4352-b387-2b80fed0832e-cover.png",
-        date: "3 Juli 2025",
-        link: "/blog/penjualan-dari-website"
+        slug: "perbedaan-website-dan-sosmed",
+        title: "Website vs Sosial Media: Mana yang Lebih Penting?",
+        excerpt: "Banyak pemilik bisnis bertanya, apakah cukup hanya dengan Instagram? Simak perbedaan, kelebihan, dan cara menggabungkan keduanya.",
+        date: "15 Juni 2025",
+        image: "https://s3-alpha.figma.com/hub/file/971184d8-cover.png",
+        content: "\n      <p>Sosial media bagus untuk engagement, tapi website adalah tempat transaksi, kontrol brand, dan SEO. Gunakan keduanya secara strategis.</p>\n    "
     }
 ];
 function BlogPage() {
@@ -1397,7 +1366,7 @@ function BlogPage() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$navbar$2f$navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/blog/page.tsx",
-                lineNumber: 85,
+                lineNumber: 70,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1408,7 +1377,7 @@ function BlogPage() {
                         children: "Blog & Artikel"
                     }, void 0, false, {
                         fileName: "[project]/app/blog/page.tsx",
-                        lineNumber: 87,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1416,13 +1385,13 @@ function BlogPage() {
                         children: "Tips, insight, dan inspirasi seputar dunia website & digital presence."
                     }, void 0, false, {
                         fileName: "[project]/app/blog/page.tsx",
-                        lineNumber: 88,
+                        lineNumber: 73,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/blog/page.tsx",
-                lineNumber: 86,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1452,7 +1421,7 @@ function BlogPage() {
                                 className: "w-full h-48 object-cover"
                             }, void 0, false, {
                                 fileName: "[project]/app/blog/page.tsx",
-                                lineNumber: 102,
+                                lineNumber: 87,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1463,7 +1432,7 @@ function BlogPage() {
                                         children: blog.date
                                     }, void 0, false, {
                                         fileName: "[project]/app/blog/page.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 89,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1471,7 +1440,7 @@ function BlogPage() {
                                         children: blog.title
                                     }, void 0, false, {
                                         fileName: "[project]/app/blog/page.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 90,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1479,35 +1448,35 @@ function BlogPage() {
                                         children: blog.excerpt
                                     }, void 0, false, {
                                         fileName: "[project]/app/blog/page.tsx",
-                                        lineNumber: 106,
+                                        lineNumber: 91,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/blog/page.tsx",
-                                lineNumber: 103,
+                                lineNumber: 88,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, blog.id, true, {
                         fileName: "[project]/app/blog/page.tsx",
-                        lineNumber: 93,
+                        lineNumber: 78,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/blog/page.tsx",
-                lineNumber: 91,
+                lineNumber: 76,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/blog/page.tsx",
-                lineNumber: 111,
+                lineNumber: 96,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/blog/page.tsx",
-        lineNumber: 84,
+        lineNumber: 69,
         columnNumber: 5
     }, this);
 }

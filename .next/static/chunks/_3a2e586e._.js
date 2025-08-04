@@ -763,7 +763,7 @@ const NavigationSheet = ()=>{
                             className: "w-full sm:hidden",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "https://wa.me/681949427807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website.",
+                                    href: "https://wa.me/+6281949427807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website.",
                                     target: "_blank",
                                     rel: "noopener noreferrer",
                                     children: "Hubungi Kami"
@@ -934,7 +934,7 @@ const Navbar = ()=>{
                             className: "hidden sm:inline-flex",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "https://wa.me/681949427807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website.",
+                                    href: "https://wa.me/+6281949427807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website.",
                                     target: "_blank",
                                     rel: "noopener noreferrer",
                                     children: "Hubungi Kami"

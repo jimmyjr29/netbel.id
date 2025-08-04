@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "NetBel.id",
     locale: "id_ID",
-    url: "https://netbel.id",
+    url: "https://netbel.my.id",
     title: "NetBel.id - Jasa Pembuatan Website Modern & Terjangkau",
     description: "NetBel.id melayani pembuatan website dengan desain elegan, harga bersahabat, dan pengerjaan cepat. Cocok untuk UMKM, personal brand, hingga perusahaan.",
     images: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "NetBel Team",
-      url: "https://netbel.id",
+      url: "https://netbel.my.id",
     },
   ],
   creator: "NetBel Studio",

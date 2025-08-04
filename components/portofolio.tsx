@@ -1,36 +1,43 @@
 import React from "react";
 import Marquee from "@/components/ui/marquee";
+import Image from "next/image";
 
 const portfolios = [
   {
     id: 1,
-    title: "Sistem Informasi Sekolah",
-    image: "https://s3-alpha.figma.com/hub/file/2221064461889239304/resized/1200x720/7ca66cc0-af2f-4051-bba9-111e8c7912dd-cover.png",
-    link: "https://example.com/project-1",
+    title: "Company Profile Interior",
+    image: "/image/portofolios/company-profile.png",
+    link: "/.",
   },
   {
     id: 2,
-    title: "Website Pariwisata Belitung",
-    image: "https://s3-alpha.figma.com/hub/file/2970166630/resized/800x480/10e2b48f-45ea-496d-a209-486ee212bff5-cover.png",
-    link: "https://example.com/project-2",
+    title: "Open Trip",
+    image: "/image/portofolios/opentrip.png",
+    link: "/",
   },
   {
     id: 3,
-    title: "Landing Page UMKM Lokal",
-    image: "https://s3-alpha.figma.com/hub/file/2224354844914769031/b64a41ed-ad02-4486-a2eb-6bc5ea0312de-cover.png",
-    link: "https://example.com/project-3",
+    title: "Company Profile Kontraktor",
+    image: "/image/portofolios/kontraktor.png",
+    link: "/",
   },
   {
     id: 4,
-    title: "Company Profile Kontraktor",
-    image: "https://s3-alpha.figma.com/hub/file/3677930348/e3421eb5-3604-412d-8fff-96a0d304880e-cover.png",
-    link: "https://example.com/project-4",
+    title: "Rental Mobil",
+    image: "/image/portofolios/rencar.png",
+    link: "/",
   },
   {
     id: 5,
-    title: "Toko Online Fashion",
-    image: "https://s3-alpha.figma.com/hub/file/5999957204/dd434a82-8a1b-45b3-a5e0-84057a10ba17-cover.png",
-    link: "https://example.com/project-5",
+    title: "Travel Agensi",
+    image: "/image/portofolios/travel.png",
+    link: "/",
+  },
+  {
+    id: 6,
+    title: "Undangan Online",
+    image: "/image/portofolios/undangan.png",
+    link: "/",
   },
 ];
 
@@ -56,7 +63,9 @@ const PortfolioList = () =>
   portfolios.map((item) => (
     <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer" className="group relative m-2 min-w-[320px] max-w-sm overflow-hidden rounded-xl border border-border bg-card shadow-md hover:scale-[1.05] transition-transform">
       <div className="relative w-full h-48">
-        <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+        {/* <Image src={item.image} alt={item.title} className="w-full h-full object-cover" /> */}
+        <Image src={item.image} alt={item.title} width={400} height={300} className="object-cover rounded-lg" unoptimized />
+
         {/* Overlay text with glass effect */}
         <div className="absolute bottom-0 left-0 w-full px-4 py-2 bg-background/50 backdrop-blur-sm">
           <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition">{item.title}</h3>

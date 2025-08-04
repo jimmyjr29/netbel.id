@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <Button className="hidden sm:inline-flex">
-            <a href="https://wa.me/681949427807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/+6281949427807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website." target="_blank" rel="noopener noreferrer">
               Hubungi Kami
             </a>
             <ArrowUpRight className="h-4! w-4!" />

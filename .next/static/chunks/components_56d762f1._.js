@@ -912,7 +912,7 @@ const Hero = ()=>{
                                 className: "w-full sm:w-auto rounded-full text-base",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                        href: "https://wa.me/681949427807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website.",
+                                        href: "https://wa.me/081949427807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website.",
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         children: "Konsultasi sekarang"
@@ -1493,7 +1493,7 @@ const Pricing = ()=>{
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "https://wa.me/087868626690?text=".concat(encodeURIComponent("Halo NetBel! Saya tertarik dengan paket *".concat(plan.name, "*. Mohon info lebih lanjut ya."))),
+                                    href: "https://wa.me/+6281949427807?text=".concat(encodeURIComponent("Halo NetBel! Saya tertarik dengan paket *".concat(plan.name, "*. Mohon info lebih lanjut ya."))),
                                     target: "_blank",
                                     rel: "noopener noreferrer",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
