@@ -7,18 +7,27 @@ import { TypographyH1 } from "@/components/ui/typography";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
+import { Metadata } from "next";
 
-export function generateStaticParams() {
+// Diperlukan untuk pre-render static params (SSG)
+export async function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
 }
 
-// ✅ Gunakan async component + await params.slug (untuk memastikan Next.js tidak salah deteksi)
-export default async function BlogDetailPage(props: { params: { slug: string } }) {
-  const { slug } = await Promise.resolve(props.params); // ✅ paksa agar diresolve dulu
+// Optional: SEO Metadata
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const blog = blogs.find((item) => item.slug === params.slug);
+  return {
+    title: blog?.title ?? "Artikel NetBel",
+    description: blog?.excerpt ?? "Blog seputar bisnis dan website dari NetBel.id",
+  };
+}
 
-  const blog = blogs.find((item) => item.slug === slug);
+// Halaman detail blog
+export default async function BlogDetailPage({ params }: { params: { slug: string } }) {
+  const blog = blogs.find((item) => item.slug === params.slug);
   if (!blog) return notFound();
 
   return (
