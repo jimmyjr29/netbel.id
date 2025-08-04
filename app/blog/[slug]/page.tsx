@@ -189,6 +189,12 @@ const blogs = [
   },
 ];
 
+export function generateStaticParams() {
+  return blogs.map((blog) => ({
+    slug: blog.slug,
+  }));
+}
+
 export default function BlogDetailPage({ params }: { params: { slug: string } }) {
   const blog = blogs.find((item) => item.slug === params.slug);
   if (!blog) return notFound();
