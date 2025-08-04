@@ -168,28 +168,28 @@ const blogs = [
     image: "/image/blog/blog6.png",
     content: `<p>Banyak pemilik bisnis menganggap blog hanya cocok untuk penulis atau influencer. Padahal, blog di website bisnis bisa menjadi alat pemasaran yang sangat efektif—bahkan gratis!</p>
 
-  <p><strong>1. Meningkatkan SEO (Search Engine Optimization)</strong></p>
-  <p>Blog memberi peluang untuk memasukkan kata kunci yang sering dicari calon pelanggan. Semakin banyak artikel relevan yang Anda tulis, semakin besar kemungkinan website Anda muncul di hasil pencarian Google.</p>
+    <p><strong>1. Meningkatkan SEO (Search Engine Optimization)</strong></p>
+    <p>Blog memberi peluang untuk memasukkan kata kunci yang sering dicari calon pelanggan. Semakin banyak artikel relevan yang Anda tulis, semakin besar kemungkinan website Anda muncul di hasil pencarian Google.</p>
 
-  <p><strong>2. Membangun Kepercayaan Pelanggan</strong></p>
-  <p>Tulisan yang edukatif, seperti tips, panduan, atau studi kasus, menunjukkan bahwa bisnis Anda paham di bidangnya. Ini akan membangun kredibilitas di mata pembaca dan calon pelanggan.</p>
+    <p><strong>2. Membangun Kepercayaan Pelanggan</strong></p>
+    <p>Tulisan yang edukatif, seperti tips, panduan, atau studi kasus, menunjukkan bahwa bisnis Anda paham di bidangnya. Ini akan membangun kredibilitas di mata pembaca dan calon pelanggan.</p>
 
-  <p><strong>3. Menjawab Pertanyaan Pelanggan</strong></p>
-  <p>Alih-alih menjawab pertanyaan berulang lewat chat, Anda bisa mengarahkan pelanggan ke artikel blog yang sudah tersedia. Ini menghemat waktu dan membantu pelanggan lebih cepat mendapatkan informasi.</p>
+    <p><strong>3. Menjawab Pertanyaan Pelanggan</strong></p>
+    <p>Alih-alih menjawab pertanyaan berulang lewat chat, Anda bisa mengarahkan pelanggan ke artikel blog yang sudah tersedia. Ini menghemat waktu dan membantu pelanggan lebih cepat mendapatkan informasi.</p>
 
-  <p><strong>4. Meningkatkan Lama Kunjungan di Website</strong></p>
-  <p>Semakin banyak konten bermanfaat yang bisa dibaca, semakin lama pengunjung berada di situs Anda. Ini bagus untuk performa SEO sekaligus memperbesar peluang konversi.</p>
+    <p><strong>4. Meningkatkan Lama Kunjungan di Website</strong></p>
+    <p>Semakin banyak konten bermanfaat yang bisa dibaca, semakin lama pengunjung berada di situs Anda. Ini bagus untuk performa SEO sekaligus memperbesar peluang konversi.</p>
 
-  <p><strong>5. Menjadi Bahan Konten Sosial Media</strong></p>
-  <p>Satu artikel blog bisa diubah menjadi beberapa konten pendek untuk Instagram, Facebook, atau TikTok. Jadi, blog juga bisa memperkaya strategi konten Anda di kanal lain.</p>
+    <p><strong>5. Menjadi Bahan Konten Sosial Media</strong></p>
+    <p>Satu artikel blog bisa diubah menjadi beberapa konten pendek untuk Instagram, Facebook, atau TikTok. Jadi, blog juga bisa memperkaya strategi konten Anda di kanal lain.</p>
 
-  <p>Blog bukan sekadar tulisan, tapi aset digital jangka panjang. Selama artikelnya relevan, ia bisa terus mendatangkan trafik dan pelanggan baru tanpa perlu biaya iklan rutin.</p>
+    <p>Blog bukan sekadar tulisan, tapi aset digital jangka panjang. Selama artikelnya relevan, ia bisa terus mendatangkan trafik dan pelanggan baru tanpa perlu biaya iklan rutin.</p>
 
-  <p>Ingin punya website bisnis yang sudah siap dengan blog profesional? 👉 <a href="https://netbel.my.id" target="_blank" rel="noopener noreferrer">Konsultasikan sekarang di NetBel.id</a></p>`,
+    <p>Ingin punya website bisnis yang sudah siap dengan blog profesional? 👉 <a href="https://netbel.my.id" target="_blank" rel="noopener noreferrer">Konsultasikan sekarang di NetBel.id</a></p>`,
   },
 ];
 
-export default function BlogDetailPage({ params }: { params: { slug: string } }) {
+export default async function BlogDetailPage({ params }: { params: { slug: string } }) {
   const blog = blogs.find((item) => item.slug === params.slug);
   if (!blog) return notFound();
 

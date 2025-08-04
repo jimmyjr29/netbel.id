@@ -1164,7 +1164,7 @@ const blogs = [
         title: "Kenapa Website Bisnis Perlu Punya Blog?",
         excerpt: "Banyak pemilik bisnis menganggap blog hanya cocok untuk penulis atau influencer. Padahal, blog di website .......",
         date: "2 Agustus 2025",
-        image: "/image/blog/blog1.png"
+        image: "/image/blog/blog6.png"
     },
     {
         slug: "kenapa-website-bisnis",
