@@ -22,40 +22,48 @@ function AnimatedGridPattern({ width = 40, height = 40, x = -1, y = -1, strokeDa
         width: 0,
         height: 0
     });
-    const [squares, setSquares] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(()=>generateSquares(numSquares));
-    function getPos() {
+    const getPos = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
         return [
             Math.floor(Math.random() * dimensions.width / width),
             Math.floor(Math.random() * dimensions.height / height)
         ];
-    }
-    // Adjust the generateSquares function to return objects with an id, x, and y
-    function generateSquares(count) {
+    }, [
+        dimensions.width,
+        dimensions.height,
+        width,
+        height
+    ]);
+    const generateSquares = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])((count)=>{
         return Array.from({
             length: count
         }, (_, i)=>({
                 id: i,
                 pos: getPos()
             }));
-    }
-    // Function to update a single square's position
-    const updateSquarePosition = (id)=>{
+    }, [
+        getPos
+    ]);
+    const [squares, setSquares] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(()=>generateSquares(numSquares));
+    const updateSquarePosition = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])((id)=>{
         setSquares((currentSquares)=>currentSquares.map((sq)=>sq.id === id ? {
                     ...sq,
                     pos: getPos()
                 } : sq));
-    };
-    // Update squares to animate in
+    }, [
+        getPos
+    ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (dimensions.width && dimensions.height) {
             setSquares(generateSquares(numSquares));
         }
     }, [
         dimensions,
-        numSquares
+        numSquares,
+        generateSquares
     ]);
-    // Resize observer to update container dimensions
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const currentContainer = containerRef.current;
+        if (!currentContainer) return;
         const resizeObserver = new ResizeObserver((entries)=>{
             for (const entry of entries){
                 setDimensions({
@@ -64,17 +72,11 @@ function AnimatedGridPattern({ width = 40, height = 40, x = -1, y = -1, strokeDa
                 });
             }
         });
-        if (containerRef.current) {
-            resizeObserver.observe(containerRef.current);
-        }
+        resizeObserver.observe(currentContainer);
         return ()=>{
-            if (containerRef.current) {
-                resizeObserver.unobserve(containerRef.current);
-            }
+            resizeObserver.unobserve(currentContainer);
         };
-    }, [
-        containerRef
-    ]);
+    }, []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
         ref: containerRef,
         "aria-hidden": "true",
@@ -95,17 +97,17 @@ function AnimatedGridPattern({ width = 40, height = 40, x = -1, y = -1, strokeDa
                         strokeDasharray: strokeDasharray
                     }, void 0, false, {
                         fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                        lineNumber: 120,
+                        lineNumber: 76,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                    lineNumber: 112,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                lineNumber: 111,
+                lineNumber: 74,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
@@ -114,7 +116,7 @@ function AnimatedGridPattern({ width = 40, height = 40, x = -1, y = -1, strokeDa
                 fill: `url(#${id})`
             }, void 0, false, {
                 fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                lineNumber: 127,
+                lineNumber: 79,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -141,20 +143,20 @@ function AnimatedGridPattern({ width = 40, height = 40, x = -1, y = -1, strokeDa
                         y: y * height + 1,
                         fill: "currentColor",
                         strokeWidth: "0"
-                    }, `${x}-${y}-${index}`, false, {
+                    }, `${id}-${x}-${y}`, false, {
                         fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                        lineNumber: 130,
+                        lineNumber: 82,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                lineNumber: 128,
+                lineNumber: 80,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-        lineNumber: 102,
+        lineNumber: 73,
         columnNumber: 5
     }, this);
 }

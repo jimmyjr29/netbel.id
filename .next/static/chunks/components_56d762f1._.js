@@ -27,32 +27,50 @@ function AnimatedGridPattern(param) {
         width: 0,
         height: 0
     });
+    const getPos = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "AnimatedGridPattern.useCallback[getPos]": ()=>{
+            return [
+                Math.floor(Math.random() * dimensions.width / width),
+                Math.floor(Math.random() * dimensions.height / height)
+            ];
+        }
+    }["AnimatedGridPattern.useCallback[getPos]"], [
+        dimensions.width,
+        dimensions.height,
+        width,
+        height
+    ]);
+    const generateSquares = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "AnimatedGridPattern.useCallback[generateSquares]": (count)=>{
+            return Array.from({
+                length: count
+            }, {
+                "AnimatedGridPattern.useCallback[generateSquares]": (_, i)=>({
+                        id: i,
+                        pos: getPos()
+                    })
+            }["AnimatedGridPattern.useCallback[generateSquares]"]);
+        }
+    }["AnimatedGridPattern.useCallback[generateSquares]"], [
+        getPos
+    ]);
     const [squares, setSquares] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
         "AnimatedGridPattern.useState": ()=>generateSquares(numSquares)
     }["AnimatedGridPattern.useState"]);
-    function getPos() {
-        return [
-            Math.floor(Math.random() * dimensions.width / width),
-            Math.floor(Math.random() * dimensions.height / height)
-        ];
-    }
-    // Adjust the generateSquares function to return objects with an id, x, and y
-    function generateSquares(count) {
-        return Array.from({
-            length: count
-        }, (_, i)=>({
-                id: i,
-                pos: getPos()
-            }));
-    }
-    // Function to update a single square's position
-    const updateSquarePosition = (id)=>{
-        setSquares((currentSquares)=>currentSquares.map((sq)=>sq.id === id ? {
-                    ...sq,
-                    pos: getPos()
-                } : sq));
-    };
-    // Update squares to animate in
+    const updateSquarePosition = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "AnimatedGridPattern.useCallback[updateSquarePosition]": (id)=>{
+            setSquares({
+                "AnimatedGridPattern.useCallback[updateSquarePosition]": (currentSquares)=>currentSquares.map({
+                        "AnimatedGridPattern.useCallback[updateSquarePosition]": (sq)=>sq.id === id ? {
+                                ...sq,
+                                pos: getPos()
+                            } : sq
+                    }["AnimatedGridPattern.useCallback[updateSquarePosition]"])
+            }["AnimatedGridPattern.useCallback[updateSquarePosition]"]);
+        }
+    }["AnimatedGridPattern.useCallback[updateSquarePosition]"], [
+        getPos
+    ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "AnimatedGridPattern.useEffect": ()=>{
             if (dimensions.width && dimensions.height) {
@@ -61,11 +79,13 @@ function AnimatedGridPattern(param) {
         }
     }["AnimatedGridPattern.useEffect"], [
         dimensions,
-        numSquares
+        numSquares,
+        generateSquares
     ]);
-    // Resize observer to update container dimensions
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "AnimatedGridPattern.useEffect": ()=>{
+            const currentContainer = containerRef.current;
+            if (!currentContainer) return;
             const resizeObserver = new ResizeObserver({
                 "AnimatedGridPattern.useEffect": (entries)=>{
                     for (const entry of entries){
@@ -76,20 +96,14 @@ function AnimatedGridPattern(param) {
                     }
                 }
             }["AnimatedGridPattern.useEffect"]);
-            if (containerRef.current) {
-                resizeObserver.observe(containerRef.current);
-            }
+            resizeObserver.observe(currentContainer);
             return ({
                 "AnimatedGridPattern.useEffect": ()=>{
-                    if (containerRef.current) {
-                        resizeObserver.unobserve(containerRef.current);
-                    }
+                    resizeObserver.unobserve(currentContainer);
                 }
             })["AnimatedGridPattern.useEffect"];
         }
-    }["AnimatedGridPattern.useEffect"], [
-        containerRef
-    ]);
+    }["AnimatedGridPattern.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
         ref: containerRef,
         "aria-hidden": "true",
@@ -110,17 +124,17 @@ function AnimatedGridPattern(param) {
                         strokeDasharray: strokeDasharray
                     }, void 0, false, {
                         fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                        lineNumber: 120,
+                        lineNumber: 76,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                    lineNumber: 112,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                lineNumber: 111,
+                lineNumber: 74,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
@@ -129,7 +143,7 @@ function AnimatedGridPattern(param) {
                 fill: "url(#".concat(id, ")")
             }, void 0, false, {
                 fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                lineNumber: 127,
+                lineNumber: 79,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -158,25 +172,25 @@ function AnimatedGridPattern(param) {
                         y: y * height + 1,
                         fill: "currentColor",
                         strokeWidth: "0"
-                    }, "".concat(x, "-").concat(y, "-").concat(index), false, {
+                    }, "".concat(id, "-").concat(x, "-").concat(y), false, {
                         fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                        lineNumber: 130,
+                        lineNumber: 82,
                         columnNumber: 11
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-                lineNumber: 128,
+                lineNumber: 80,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/ui/animated-grid-pattern.tsx",
-        lineNumber: 102,
+        lineNumber: 73,
         columnNumber: 5
     }, this);
 }
-_s(AnimatedGridPattern, "oFm465hFuLSFskXqaKRrfDVPvXY=", false, function() {
+_s(AnimatedGridPattern, "dYlegID09AQSOu+Naff1SaJQElA=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useId"]
     ];

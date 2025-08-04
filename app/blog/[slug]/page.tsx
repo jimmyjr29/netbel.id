@@ -6,16 +6,17 @@ import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
 
-// SSG: pre-generate paths
 export function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
 }
 
-// 🔒 Komponen harus *sync*, tanpa `async`
-export default function BlogDetailPage({ params }: { params: { slug: string } }) {
+// ✅ HARUS async function!
+export default async function BlogDetailPage({ params }: { params: { slug: string } }) {
+  // Simulasikan fetching data async
   const blog = blogs.find((b) => b.slug === params.slug);
+
   if (!blog) return notFound();
 
   return (
