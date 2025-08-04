@@ -1,3 +1,5 @@
+// app/blog/[slug]/page.tsx
+
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { blogs } from "@/lib/blogs";
@@ -5,23 +7,19 @@ import { TypographyH1 } from "@/components/ui/typography";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
-// import type { Metadata } from "next";
 
-export async function generateStaticParams() {
+// Perhatikan: generateStaticParams dipakai untuk Static Site Generation
+export function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
 }
 
-// 👇 gunakan PageProps typing dari Next.js
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function BlogDetailPage({ params }: PageProps) {
+// Komponen tidak async karena data sudah ada (bukan fetch)
+export default function BlogDetailPage({ params }: { params: { slug: string } }) {
   const blog = blogs.find((item) => item.slug === params.slug);
+
+  // Jika tidak ditemukan, tampilkan halaman 404
   if (!blog) return notFound();
 
   return (
