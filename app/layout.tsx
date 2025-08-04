@@ -4,6 +4,8 @@ import { ThemeProvider } from "next-themes";
 import { Geist } from "next/font/google";
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/next";
+
 const geistSans = Geist({
   subsets: ["latin"],
 });
@@ -96,6 +98,7 @@ export default function RootLayout({
       <body className={`${geistSans.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <TooltipProvider>{children}</TooltipProvider>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
