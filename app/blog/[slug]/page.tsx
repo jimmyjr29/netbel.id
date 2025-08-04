@@ -6,14 +6,16 @@ import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
 
+// SSG: pre-generate paths
 export function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
 }
 
+// 🔒 Komponen harus *sync*, tanpa `async`
 export default function BlogDetailPage({ params }: { params: { slug: string } }) {
-  const blog = blogs.find((item) => item.slug === params.slug);
+  const blog = blogs.find((b) => b.slug === params.slug);
   if (!blog) return notFound();
 
   return (
@@ -24,18 +26,11 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
           <TypographyH1 className="mb-2">{blog.title}</TypographyH1>
           <p className="text-muted-foreground">{blog.date}</p>
         </div>
-
-        <div className="mb-10">
-          <Image src={blog.image} alt={blog.title} width={900} height={500} className="rounded-xl object-cover w-full h-auto shadow" unoptimized />
-        </div>
-
+        <Image src={blog.image} alt={blog.title} width={900} height={500} className="rounded-xl object-cover w-full h-auto shadow" unoptimized />
         <div className="prose prose-neutral dark:prose-invert m-2 max-w-none space-y-4" dangerouslySetInnerHTML={{ __html: blog.content }} />
-
-        <div className="mt-10">
-          <Link href="/blog" className="text-sm text-primary hover:underline">
-            ← Kembali ke Blog
-          </Link>
-        </div>
+        <Link href="/blog" className="text-sm text-primary hover:underline">
+          ← Kembali ke Blog
+        </Link>
       </section>
       <Footer />
     </>
