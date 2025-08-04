@@ -6,16 +6,17 @@ import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
 }
 
-// ✅ HARUS async function!
-export default async function BlogDetailPage({ params }: { params: { slug: string } }) {
-  // Simulasikan fetching data async
-  const blog = blogs.find((b) => b.slug === params.slug);
+// Ubah tipe params menjadi Promise
+export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  // Await params sebelum menggunakan propertinya
+  const { slug } = await params;
+  const blog = blogs.find((b) => b.slug === slug);
 
   if (!blog) return notFound();
 
