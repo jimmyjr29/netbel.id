@@ -8,18 +8,17 @@ import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
 
-// Perhatikan: generateStaticParams dipakai untuk Static Site Generation
 export function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
 }
 
-// Komponen tidak async karena data sudah ada (bukan fetch)
-export default function BlogDetailPage({ params }: { params: { slug: string } }) {
-  const blog = blogs.find((item) => item.slug === params.slug);
+// ✅ Gunakan async component + await params.slug (untuk memastikan Next.js tidak salah deteksi)
+export default async function BlogDetailPage(props: { params: { slug: string } }) {
+  const { slug } = await Promise.resolve(props.params); // ✅ paksa agar diresolve dulu
 
-  // Jika tidak ditemukan, tampilkan halaman 404
+  const blog = blogs.find((item) => item.slug === slug);
   if (!blog) return notFound();
 
   return (
