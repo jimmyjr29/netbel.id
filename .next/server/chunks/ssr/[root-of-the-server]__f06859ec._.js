@@ -1327,10 +1327,8 @@ const __TURBOPACK__default__export__ = Footer;
 "[project]/app/blog/[slug]/page.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-// app/blog/[slug]/page.tsx
 __turbopack_context__.s({
     "default": ()=>BlogDetailPage,
-    "generateMetadata": ()=>generateMetadata,
     "generateStaticParams": ()=>generateStaticParams
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
@@ -1350,26 +1348,19 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 ;
 ;
 ;
-async function generateStaticParams() {
+function generateStaticParams() {
     return __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$blogs$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["blogs"].map((blog)=>({
             slug: blog.slug
         }));
 }
-async function generateMetadata({ params }) {
-    const blog = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$blogs$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["blogs"].find((item)=>item.slug === params.slug);
-    return {
-        title: blog?.title ?? "Artikel NetBel",
-        description: blog?.excerpt ?? "Blog seputar bisnis dan website dari NetBel.id"
-    };
-}
-async function BlogDetailPage({ params }) {
+function BlogDetailPage({ params }) {
     const blog = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$blogs$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["blogs"].find((item)=>item.slug === params.slug);
     if (!blog) return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["notFound"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$navbar$2f$navbar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/blog/[slug]/page.tsx",
-                lineNumber: 35,
+                lineNumber: 21,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1383,7 +1374,7 @@ async function BlogDetailPage({ params }) {
                                 children: blog.title
                             }, void 0, false, {
                                 fileName: "[project]/app/blog/[slug]/page.tsx",
-                                lineNumber: 38,
+                                lineNumber: 24,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1391,13 +1382,13 @@ async function BlogDetailPage({ params }) {
                                 children: blog.date
                             }, void 0, false, {
                                 fileName: "[project]/app/blog/[slug]/page.tsx",
-                                lineNumber: 39,
+                                lineNumber: 25,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                        lineNumber: 37,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1411,12 +1402,12 @@ async function BlogDetailPage({ params }) {
                             unoptimized: true
                         }, void 0, false, {
                             fileName: "[project]/app/blog/[slug]/page.tsx",
-                            lineNumber: 43,
+                            lineNumber: 29,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                        lineNumber: 42,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1426,7 +1417,7 @@ async function BlogDetailPage({ params }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                        lineNumber: 46,
+                        lineNumber: 32,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1437,23 +1428,23 @@ async function BlogDetailPage({ params }) {
                             children: "← Kembali ke Blog"
                         }, void 0, false, {
                             fileName: "[project]/app/blog/[slug]/page.tsx",
-                            lineNumber: 49,
+                            lineNumber: 35,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                        lineNumber: 48,
+                        lineNumber: 34,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/blog/[slug]/page.tsx",
-                lineNumber: 36,
+                lineNumber: 22,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/blog/[slug]/page.tsx",
-                lineNumber: 54,
+                lineNumber: 40,
                 columnNumber: 7
             }, this)
         ]

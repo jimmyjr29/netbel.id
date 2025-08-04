@@ -1,5 +1,3 @@
-// app/blog/[slug]/page.tsx
-
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { blogs } from "@/lib/blogs";
@@ -7,26 +5,14 @@ import { TypographyH1 } from "@/components/ui/typography";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
-import { Metadata } from "next";
 
-// Diperlukan untuk pre-render static params (SSG)
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
 }
 
-// Optional: SEO Metadata
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const blog = blogs.find((item) => item.slug === params.slug);
-  return {
-    title: blog?.title ?? "Artikel NetBel",
-    description: blog?.excerpt ?? "Blog seputar bisnis dan website dari NetBel.id",
-  };
-}
-
-// Halaman detail blog
-export default async function BlogDetailPage({ params }: { params: { slug: string } }) {
+export default function BlogDetailPage({ params }: { params: { slug: string } }) {
   const blog = blogs.find((item) => item.slug === params.slug);
   if (!blog) return notFound();
 
