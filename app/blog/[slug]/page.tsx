@@ -189,7 +189,7 @@ const blogs = [
   },
 ];
 
-export default async function BlogDetailPage({ params }: { params: { slug: string } }) {
+export default function BlogDetailPage({ params }: { params: { slug: string } }) {
   const blog = blogs.find((item) => item.slug === params.slug);
   if (!blog) return notFound();
 
@@ -197,21 +197,17 @@ export default async function BlogDetailPage({ params }: { params: { slug: strin
     <>
       <Navbar />
       <section className="max-w-4xl mt-8 mx-auto px-4 py-20">
-        {/* Judul dan Tanggal */}
         <div className="mb-6 text-center">
           <TypographyH1 className="mb-2">{blog.title}</TypographyH1>
           <p className="text-muted-foreground">{blog.date}</p>
         </div>
 
-        {/* Gambar */}
         <div className="mb-10">
           <Image src={blog.image} alt={blog.title} width={900} height={500} className="rounded-xl object-cover w-full h-auto shadow" unoptimized />
         </div>
 
-        {/* Konten */}
         <div className="prose prose-neutral dark:prose-invert m-2 max-w-none space-y-4" dangerouslySetInnerHTML={{ __html: blog.content }} />
 
-        {/* Navigasi Kembali */}
         <div className="mt-10">
           <Link href="/blog" className="text-sm text-primary hover:underline">
             ← Kembali ke Blog
