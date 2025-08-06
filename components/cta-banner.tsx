@@ -16,7 +16,7 @@ export default function CTABanner() {
         </div>
         <div className="relative z-0 mt-14 flex flex-col sm:flex-row gap-4">
           <Button size="lg">
-            <a href="https://wa.me/+6281949427807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/+6285121137807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website." target="_blank" rel="noopener noreferrer">
               Konsultasi Sekarang
             </a>
             <ArrowUpRight className="h-5! w-5!" />

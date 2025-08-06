@@ -124,10 +124,10 @@ const Testimonials = () => (
       <div className="relative">
         <div className="z-10 absolute left-0 inset-y-0 w-[15%] bg-linear-to-r from-background to-transparent" />
         <div className="z-10 absolute right-0 inset-y-0 w-[15%] bg-linear-to-l from-background to-transparent" />
-        <Marquee pauseOnHover className="[--duration:20s]">
+        <Marquee pauseOnHover className="[--duration:40s]">
           <TestimonialList />
         </Marquee>
-        <Marquee pauseOnHover reverse className="mt-0 [--duration:20s]">
+        <Marquee pauseOnHover reverse className="mt-0 [--duration:40s]">
           <TestimonialList />
         </Marquee>
       </div>

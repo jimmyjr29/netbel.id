@@ -31,7 +31,7 @@ const Hero = () => {
 
           <motion.div className="mt-12 flex flex-col sm:flex-row items-center sm:justify-center gap-4" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
             <Button size="lg" className="w-full sm:w-auto rounded-full text-base">
-              <a href="https://wa.me/+6281949427807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website." target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/+6285121137807?text=Halo%20NetBel%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website." target="_blank" rel="noopener noreferrer">
                 Konsultasi sekarang
               </a>
               <ArrowUpRight className="h-5! w-5!" />
