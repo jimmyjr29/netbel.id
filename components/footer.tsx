@@ -64,7 +64,7 @@ const Footer = () => {
               <MailIcon size={14} /> <small> netbel.id@gmail.com</small>
             </div>
             <div className="mt-2 flex items-center gap-2">
-              <MessageCircleMore size={14} /> <small> +62 819-4942-7807</small>
+              <MessageCircleMore size={14} /> <small> +62 851-2113-7807</small>
             </div>
           </div>
         </div>
@@ -83,10 +83,10 @@ const Footer = () => {
             <Link href="#" target="_blank">
               <Facebook className="h-5 w-5" />
             </Link>
-            <Link href="#" target="_blank">
+            <Link href="https://www.instagram.com/netbel.id" target="_blank">
               <Instagram className="h-5 w-5" />
             </Link>
-            <Link href="#" target="_blank">
+            <Link href="https://netbel.my.id/" target="_blank">
               <Globe className="h-5 w-5" />
             </Link>
           </div>
